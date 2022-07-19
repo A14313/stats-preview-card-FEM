@@ -1,0 +1,37 @@
+@use 'sass:map';
+@import 'breakpoints';
+
+/*Font Family*/
+
+$font-family: (
+    primary: ('Inter', sans-serif),
+    accent: ('Lexend Deca', sans-serif)
+);
+
+@function ff($key) {
+    @return map.get($font-family, $key);
+}
+
+/*Font Weight*/
+
+$font-weight: (
+    fw-regular: 400,
+    fw-bold: 700
+);
+
+@function fw($key) {
+    @return map.get($font-weight, $key);
+}
+
+/*Font Size*/
+
+:root {
+    --fs-200: .75rem; /*12px*/
+    --fs-300: .875rem; /*13px*/
+    --fs-400: .9375; /*15px*/
+    --fs-500: 1rem; /*16px*/
+    --fs-600: 1.4375rem; /*20px*/
+    
+    --fs-body: var(--fs-400);
+    --fs-primary-heading: var(--fs-600);
+}

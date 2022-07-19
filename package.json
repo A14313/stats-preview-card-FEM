@@ -1,0 +1,25 @@
+{
+  "name": "stats-preview-card-fem",
+  "version": "1.0.0",
+  "description": "Stats Preview Card Component challenge from Front End Mentor",
+  "scripts": {
+    "start": "parcel src/*.html --open",
+    "build": "parcel build src/*.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A14313/stats-preview-card-FEM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A14313/stats-preview-card-FEM/issues"
+  },
+  "homepage": "https://github.com/A14313/stats-preview-card-FEM#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2",
+    "sass": "^1.53.0"
+  }
+}
