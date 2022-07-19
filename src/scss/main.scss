@@ -11,6 +11,12 @@ body {
     color: color(neutral-400);
     line-height: 1.7;
     background-color: color(primary-400);
+
+    @include mediaQuery(med) {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
 }
 
 em {
@@ -29,13 +35,6 @@ em {
     place-items: center;
 }
 
-
-/*.card[data-type=mobile] {
-background-color: color(primary-300);
-margin-block: 3em;
-margin-inline: 3em;
-}*/
-
 .card {
     background-color: color(primary-300);
     margin-block: 3em;
@@ -47,7 +46,7 @@ margin-inline: 3em;
     @include mediaQuery(med) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: unset;
+        max-width: 1000px;
     }
 
     &__img {
@@ -68,14 +67,51 @@ margin-inline: 3em;
             width: 100%;
         }
 
+        & img[data-type="mobile"] {
+            display: block;
+        }
+
+        & img[data-type="desktop"] {
+            display: none;
+        }
+
         @include mediaQuery(med) {
             order: 2;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+
+            & img[data-type="mobile"] {
+                display: none;
+            }
+
+            & img[data-type="desktop"] {
+                display: block;
+            }
         }
     }
 
 
     &__content {
         margin-block: 2em;
+
+        @include mediaQuery(med) {
+            padding-inline: 2em;
+        }
+
+        @include mediaQuery(lrg) {
+            width: 90%;
+            margin-inline: auto;
+            padding-block: 2em;
+        }
+
+        @include mediaQuery(xlrg) {
+            width: 90%;
+            margin-inline: auto;
+            padding-block: 2em;
+        }
     }
 
     &__main {
@@ -89,9 +125,17 @@ margin-inline: 3em;
         font-size: var(--fs-600);
         line-height: 1.3;
         text-align: center;
-        
+
         @include mediaQuery(med) {
             text-align: initial;
+        }
+
+        @include mediaQuery(lrg) {
+            font-size: var(--fs-700);
+        }
+
+        @include mediaQuery(xlrg) {
+            font-size: var(--fs-800);
         }
     }
 
@@ -99,9 +143,17 @@ margin-inline: 3em;
         font-size: var(--fs-400);
         color: color(neutral-350);
         text-align: center;
-        
+
         @include mediaQuery(med) {
             text-align: initial;
+        }
+
+        @include mediaQuery(lrg) {
+            font-size: var(--fs-500);
+        }
+
+        @include mediaQuery(xlrg) {
+            font-size: var(--fs-600);
         }
     }
 
@@ -109,19 +161,51 @@ margin-inline: 3em;
         padding-inline: 1.2em;
     }
 
+
     &__stats__list {
         list-style-type: none;
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6em;
+
+        @include mediaQuery(med) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         li {
             text-align: center;
+
+            @include mediaQuery(med) {
+                text-align: initial;
+            }
+
+            .card__heading {
+                /*I only did this because on larger screens I want to change the heading font size*/
+                @include mediaQuery(lrg) {
+                    font-size: var(--fs-600);
+                }
+
+                @include mediaQuery(xlrg) {
+                    font-size: var(--fs-700);
+                }
+            }
 
             p {
                 font-family: ff(accent);
                 text-transform: uppercase;
                 color: color(neutral-300);
                 font-size: var(--fs-200);
+
+                @include mediaQuery(lrg) {
+                    font-size: var(--fs-300);
+                }
+
+                @include mediaQuery(xlrg) {
+                    font-size: var(--fs-350);
+                }
             }
         }
     }
