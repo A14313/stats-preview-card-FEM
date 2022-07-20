@@ -49,6 +49,10 @@ em {
         max-width: 1000px;
     }
 
+    @include mediaQuery(xlrg) {
+        max-width: 1200px;    
+    }
+
     &__img {
         position: relative;
 
@@ -60,11 +64,13 @@ em {
             width: 100%;
             height: 100%;
             opacity: .5;
+            pointer-events: none;
         }
 
         & img {
             object-fit: cover;
             width: 100%;
+            pointer-events: none;
         }
 
         & img[data-type="mobile"] {
@@ -96,15 +102,17 @@ em {
 
     &__content {
         margin-block: 2em;
+        //        outline: 1px solid red;
 
         @include mediaQuery(med) {
             padding-inline: 2em;
+            padding-block: 1em;
         }
 
         @include mediaQuery(lrg) {
             width: 90%;
             margin-inline: auto;
-            padding-block: 2em;
+            padding-block: 1em;
         }
 
         @include mediaQuery(xlrg) {
@@ -122,11 +130,12 @@ em {
     }
 
     &__heading {
-        font-size: var(--fs-600);
+        font-size: var(--fs-650);
         line-height: 1.3;
         text-align: center;
 
         @include mediaQuery(med) {
+            font-size: var(--fs-650);
             text-align: initial;
         }
 
@@ -153,7 +162,7 @@ em {
         }
 
         @include mediaQuery(xlrg) {
-            font-size: var(--fs-600);
+            font-size: var(--fs-530);
         }
     }
 
@@ -184,12 +193,19 @@ em {
 
             .card__heading {
                 /*I only did this because on larger screens I want to change the heading font size*/
+
+                font-size: var(--fs-530);
+
+                @include mediaQuery(med) {
+                    font-size: var(--fs-530);
+                }
+
                 @include mediaQuery(lrg) {
                     font-size: var(--fs-600);
                 }
 
                 @include mediaQuery(xlrg) {
-                    font-size: var(--fs-700);
+                    font-size: var(--fs-650);
                 }
             }
 
@@ -198,14 +214,6 @@ em {
                 text-transform: uppercase;
                 color: color(neutral-300);
                 font-size: var(--fs-200);
-
-                @include mediaQuery(lrg) {
-                    font-size: var(--fs-300);
-                }
-
-                @include mediaQuery(xlrg) {
-                    font-size: var(--fs-350);
-                }
             }
         }
     }
