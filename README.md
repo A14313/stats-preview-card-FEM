@@ -14,8 +14,8 @@
 - Mobile-first workflow
 
 ### Links
-- Solution URL
-- [Live Site URL:](https://a14313.github.io/stats-preview-card-FEM/dist)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-css-grid-and-flexbox-9ktU1M_TTC)
+- [Live Site URL](https://a14313.github.io/stats-preview-card-FEM/dist)
 
 ## Author
 - [Github](https://github.com/A14313)
