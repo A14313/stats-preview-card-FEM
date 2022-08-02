@@ -18,5 +18,5 @@
 - [Live Site URL](https://a14313.github.io/stats-preview-card-FEM/dist)
 
 ## Author
-- [Github](https://github.com/A14313)
+- [Carlo Autor - Github](https://github.com/A14313)
 - [Frontend Mentor](https://www.frontendmentor.io/profile/A14313)
